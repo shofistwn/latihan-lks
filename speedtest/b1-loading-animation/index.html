@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Animation</title>
+
+    <style>
+      .loading-box {
+        width: 115px;
+        height: 115px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30% auto;
+        row-gap: 15px;
+        column-gap: 15px;
+        animation: rotate 4s linear infinite;
+      }
+      .loading-ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        animation: ball 2s linear infinite;
+      }
+      .loading-ball:nth-child(1) {
+        background-color: #19a68c;
+      }
+      .loading-ball:nth-child(2) {
+        background-color: #f63d3a;
+      }
+      .loading-ball:nth-child(3) {
+        background-color: #fda543;
+      }
+      .loading-ball:nth-child(4) {
+        background-color: #193b48;
+      }
+      @keyframes ball {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.7);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-box">
+      <div class="loading-ball"></div>
+      <div class="loading-ball"></div>
+      <div class="loading-ball"></div>
+      <div class="loading-ball"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Animation</title>
+
+    <style>
+      canvas {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="320"></canvas>
+    <div id="tes"></div>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const tes = document.getElementById("tes");
+      const ctx = canvas.getContext("2d");
+      const ballRadius = 10;
+      let x = (canvas.width - ballRadius) / 2;
+      let y = (canvas.height - ballRadius) / 2;
+      let xSpeed = 2
+
+      function ball() {
+        ctx.beginPath();
+        ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ball();
+
+        if (x + ballRadius >= canvas.width) {
+          x = canvas.width - ballRadius
+          xSpeed = -2
+        } else if (x - ballRadius <= 0) {
+          x = ballRadius
+          xSpeed = 2
+        }
+        x += xSpeed
+      }
+
+      setInterval(draw, 10);
+    </script>
+  </body>
+</html>

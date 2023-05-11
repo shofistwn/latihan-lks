@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+
+    <style>
+      .transition {
+        width: 678px;
+        height: 350px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .transition-line {
+        width: calc(100% / 5);
+        height: calc(100% / 3);
+        background-image: url("./image.PNG");
+        background-size: auto;
+      }
+
+      .transition-line:hover {
+        visibility: hidden;
+      }
+
+      .transition-line:nth-child(1) {
+        background-position: 0 0;
+      }
+
+      .transition-line:nth-child(2) {
+        background-position: 20% 0;
+      }
+
+      .transition-line:nth-child(3) {
+        background-position: 40% 0;
+      }
+
+      .transition-line:nth-child(4) {
+        background-position: 60% 0;
+      }
+
+      .transition-line:nth-child(5) {
+        background-position: 80% 0;
+      }
+
+      .transition-line:nth-child(6) {
+        background-position: 0 calc(100% / 3);
+      }
+
+      .transition-line:nth-child(7) {
+        background-position: 20% calc(100% / 3);
+      }
+
+      .transition-line:nth-child(8) {
+        background-position: 40% calc(100% / 3);
+      }
+
+      .transition-line:nth-child(9) {
+        background-position: 60% calc(100% / 3);
+      }
+
+      .transition-line:nth-child(10) {
+        background-position: 80% calc(100% / 3);
+      }
+
+      .transition-line:nth-child(11) {
+        background-position: 0 calc((100% / 3) * 2);
+      }
+
+      .transition-line:nth-child(12) {
+        background-position: 20% calc((100% / 3) * 2);
+      }
+
+      .transition-line:nth-child(13) {
+        background-position: 40% calc((100% / 3) * 2);
+      }
+
+      .transition-line:nth-child(14) {
+        background-position: 60% calc((100% / 3) * 2);
+      }
+
+      .transition-line:nth-child(15) {
+        background-position: 80% calc((100% / 3) * 2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="transition">
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+      <div class="transition-line"></div>
+    </div>
+  </body>
+</html>

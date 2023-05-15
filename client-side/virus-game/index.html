@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virus Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="game-info">
+        <div id="score">Score: 0</div>
+        <div id="fail">Fail: 0</div>
+        <div id="player">Player:</div>
+      </div>
+      <div class="game-line">
+        <div class="line">
+          <img id="virus1" class="virus" src="./virus.PNG" alt="" />
+          <img id="bullet1" class="bullet" src="./bullet.PNG" alt="" />
+        </div>
+        <div class="line">
+          <img id="virus2" class="virus" src="./virus.PNG" alt="" />
+          <img id="bullet2" class="bullet" src="./bullet.PNG" alt="" />
+        </div>
+        <div class="line">
+          <img id="virus3" class="virus" src="./virus.PNG" alt="" />
+          <img id="bullet3" class="bullet" src="./bullet.PNG" alt="" />
+        </div>
+        <div class="line">
+          <img id="virus4" class="virus" src="./virus.PNG" alt="" />
+          <img id="bullet4" class="bullet" src="./bullet.PNG" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="startModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h2>Virus Slayer</h2>
+        <input type="text" name="" id="playerName" placeholder="Input Username">
+        <button onclick="closeStartModal()">Play</button>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="pausedModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h2>Paused</h2>
+        <button onclick="continueGame()">Continue</button>
+        <button onclick="restartGame()">Restart</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

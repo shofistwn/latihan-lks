@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virus Slayer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="game-info">
+        <div id="time">Time</div>
+        <div id="score">Score</div>
+        <div id="fail">Fail</div>
+        <div id="player">Player</div>
+      </div>
+      <div class="game-menu">
+        <h2>Virus Slayer</h2>
+        <button id="restart">Restart</button>
+        <button id="quit">Quit</button>
+      </div>
+      <div class="game-line">
+        <div>
+          <img
+            class="virus"
+            id="virus1"
+            src="./images/coronavirus-gaedba68d4_1280.png"
+            alt=""
+          />
+          <img
+            class="bullet"
+            id="bullet1"
+            src="./images/PinClipart.com_syringe-clipart_5285119.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="virus"
+            id="virus2"
+            src="./images/coronavirus-gaedba68d4_1280.png"
+            alt=""
+          />
+          <img
+            class="bullet"
+            id="bullet2"
+            src="./images/PinClipart.com_syringe-clipart_5285119.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="virus"
+            id="virus3"
+            src="./images/coronavirus-gaedba68d4_1280.png"
+            alt=""
+          />
+          <img
+            class="bullet"
+            id="bullet3"
+            src="./images/PinClipart.com_syringe-clipart_5285119.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="virus"
+            id="virus4"
+            src="./images/coronavirus-gaedba68d4_1280.png"
+            alt=""
+          />
+          <img
+            class="bullet"
+            id="bullet4"
+            src="./images/PinClipart.com_syringe-clipart_5285119.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="modal">
+      <div class="modal-body">
+        <h2>Instruction Virus Slayer</h2>
+        <input type="text" id="username" placeholder="Input Username" />
+        <button onclick="run()">Play</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

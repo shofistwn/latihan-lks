@@ -1,0 +1,77 @@
+.game {
+  width: 2024px;
+  height: 1024px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.game
+
+.game-info {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  font-size: 40px;
+}
+
+.game-menu {
+  position: absolute;
+  left: 2%;
+  top: 30%;
+}
+
+.game-menu h2 {
+  font-size: 50px;
+}
+
+.game-menu button {
+  display: block;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.game-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  translate: -50%;
+  background: #ccc;
+  width: 524px;
+  height: 100%;
+  display: flex;
+  background-image: url("./images/d.png");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center 98%;
+}
+
+.game-line div {
+  width: 25%;
+  height: 100%;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.bullet {
+  position: absolute;
+  top: 897px;
+  width: 80%;
+  height: auto;
+  margin-left: 15px;
+  transform: rotate(-45deg);
+  display: none;
+}
+
+.virus {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: auto;
+  margin-left: 17px;
+}

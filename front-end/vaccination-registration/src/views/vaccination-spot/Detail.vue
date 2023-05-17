@@ -7,12 +7,14 @@
           class="container d-flex justify-content-between align-items-center"
         >
           <div>
-            <h1 class="display-4">{{ spot }}</h1>
-            <span class="text-muted"
-              >Jln. HOS. Cjokroaminoto (Pasirkaliki) No. 900, DKI Jakarta</span
-            >
+            <h1 class="display-4">{{ spot.name }}</h1>
+            <span class="text-muted">
+              {{ spot.address }}
+            </span>
           </div>
-          <a href="" class="btn btn-primary">Register vaccination</a>
+          <a href="" class="btn btn-primary" @click="registerVaccination"
+            >Register vaccination</a
+          >
         </div>
       </header>
       <!-- E: Header -->
@@ -22,7 +24,12 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="vaccination-date">Select vaccination date</label>
-              <input type="date" class="form-control" id="vaccination-date" />
+              <input
+                type="date"
+                class="form-control"
+                id="vaccination-date"
+                v-model="date"
+              />
             </div>
           </div>
         </div>
@@ -152,6 +159,10 @@ export default {
   data() {
     return {
       spot: "",
+      date: "",
+      input: {
+        date: "",
+      },
     };
   },
   mounted() {
@@ -166,7 +177,7 @@ export default {
           {
             params: {
               token: token,
-              date: "2021-09-01",
+              date: this.input.date,
             },
           }
         )
@@ -177,6 +188,29 @@ export default {
         .catch((err) => {
           console.log(err);
         });
+    },
+    async registerVaccination() {
+      const token = localStorage.getItem("token");
+      await axios
+        .get(
+          `http://localhost:8000/api/v1/spots/${this.$route.params.spot_id}`,
+          {
+            params: {
+              token: token,
+            },
+          }
+        )
+        .then((response) => {
+          this.$router.push("/dashboard");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
+  watch: {
+    date() {
+      this.input.date = this.date;
     },
   },
 };

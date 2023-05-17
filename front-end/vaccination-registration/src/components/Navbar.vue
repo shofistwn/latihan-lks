@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="#">Vaccination Platform</a>
+      <router-link class="navbar-brand" to="/dashboard"
+        >Vaccination Platform</router-link
+      >
       <button
         class="navbar-toggler"
         type="button"
